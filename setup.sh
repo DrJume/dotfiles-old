@@ -12,9 +12,13 @@ if ! [ -x "$(command -v node)" ]; then
 fi
 
 if ! [ -x "$(command -v git)" ]; then
+  echo "Installing git"
   sudo apt install -y git
 fi
+
+echo "Installing Tmux Package Manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Press prefix + I (capital I, as in Install) to fetch the plugins‚."
 
 
 node install.js
